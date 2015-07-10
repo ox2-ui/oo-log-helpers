@@ -1,6 +1,6 @@
 Package.describe({
   name: 'ox2:log-helpers',
-  summary: 'Helper functions for pretty print output',
+  summary: 'Helper functions for pretty console.log output',
   version: '1.0.0',
   git: ' /* Fill me in! */ '
 });

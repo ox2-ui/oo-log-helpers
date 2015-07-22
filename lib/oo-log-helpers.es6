@@ -2,7 +2,7 @@ let chalk = {};
 if (Meteor.isServer) {
   Npm.require('console.table');
   chalk = Npm.require('chalk');
-};
+}
 
 oo = {
   /**
@@ -13,24 +13,23 @@ oo = {
    */
   _logger(color, title, ...args) {
     // Colors for browser console
-    let colors = {
-      red: "f14646",
-      green: "72bd3d",
-      blue: "5c75db",
-      magenta: "c54482",
-      yellow: "f80",
-      gray: "545454",
-      cyan: "3ca5d3",
-    }
+    const colors = {
+      red: 'f14646',
+      green: '72bd3d',
+      blue: '5c75db',
+      magenta: 'c54482',
+      yellow: 'f80',
+      gray: '545454',
+      cyan: '3ca5d3',
+    };
     if (Meteor.isServer) {
       return console.log(chalk.styles[color].open + title + chalk.styles[color].close, ...args);
     } else if (Meteor.isClient) {
       return console.log(`%c ${title} `, `background: #${colors[color]}; color: white; padding: 1px 20px 1px 5px;`, ...args);
     }
-
   },
   log(title, ...args) {
-    return this._logger("magenta", title, ...args);
+    return this._logger('magenta', title, ...args);
   },
   logWithColor(color, title, ...args) {
     return this._logger(color, title, ...args);
@@ -42,12 +41,11 @@ oo = {
    * @param  {Object} query Optional mongo query object
    */
   logMongoCollection(arg, query = {}) {
-
     let collection = {};
-    let collectionName = "";
+    let collectionName = '';
 
     // Check if passed arg is collectiona name or instance
-    if (typeof arg === "string") {
+    if (typeof arg === 'string') {
       collection = Mongo.Collection.get(arg).find(query).fetch();
       collectionName = arg;
     } else {
@@ -62,7 +60,7 @@ oo = {
     } else if (Meteor.isClient) {
       console.table(collection);
     }
-  }
+  },
   // // TEST
   // // XXX Create real tests ;)
   // oo.log(`default`, 0);

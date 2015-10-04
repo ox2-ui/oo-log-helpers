@@ -1,7 +1,7 @@
 Package.describe({
   name: 'ox2:log-helpers',
   summary: 'TESTING_DO_NOT_USE Helper functions for pretty console.log output',
-  version: '1.2.0',
+  version: '2.0.0',
   git: ' /* Fill me in! */ '
 });
 

@@ -1,7 +1,7 @@
 Package.describe({
   name: 'ox2:log-helpers',
-  summary: 'Helper functions for pretty console.log output',
-  version: '1.0.0',
+  summary: 'TESTING_DO_NOT_USE Helper functions for pretty console.log output',
+  version: '1.2.0',
   git: ' /* Fill me in! */ '
 });
 
@@ -12,17 +12,22 @@ var CS = [C, S];
 Npm.depends({
   "console.table": "0.4.0",
   "colors": "1.1.2",
-  "chalk": "1.1.0"
+  "chalk": "1.1.1"
 });
 
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0.2.1');
+  api.versionsFrom('1.2.0.2');
+  // Core
+  api.use([
+    'templating',
+    'ecmascript'
+    ]);
   // 3rd party
   api.use([
-    'grigio:babel@0.1.4'
+
     ]);
-  api.addFiles('lib/oo-log-helpers.es6', CS);
+  api.addFiles('lib/oo-log-helpers.js', CS);
   api.export('oo');
 });
 

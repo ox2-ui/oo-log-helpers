@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "chalk": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "dependencies": {
         "ansi-styles": {
           "version": "2.1.0"

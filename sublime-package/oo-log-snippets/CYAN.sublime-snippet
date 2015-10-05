@@ -5,5 +5,5 @@ ${5:oo.log('cyan', `${2:${1:this}}`, ${3:${1:this}});}
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>oo-log CYAN</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
+	<scope>source.js</scope>
 </snippet>
